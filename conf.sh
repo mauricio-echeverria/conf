@@ -27,4 +27,4 @@ echo $FTP_PASS
 echo "-----------------------------------"
 
 echo "[server-startup] time"
-sleep 3600
+#sleep 3600
