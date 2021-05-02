@@ -26,5 +26,7 @@ echo " USER : $FTP_USER"
 echo " PASS : $FTP_PASS"
 echo "-----------------------------------"
 
+echo "[server-startup] Starting java application"
+exec java -version
 echo "[server-startup] time"
 #sleep 3600
