@@ -21,9 +21,9 @@ rm /var/secrets/env/secret.env
 fi
 
 echo "-----------------------------------"
-echo $FTP_HOST
-echo $FTP_USER
-echo $FTP_PASS
+echo " IP : $FTP_HOST"
+echo " USER : $FTP_USER"
+echo " PASS : $FTP_PASS"
 echo "-----------------------------------"
 
 echo "[server-startup] time"
