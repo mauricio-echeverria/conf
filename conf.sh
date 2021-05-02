@@ -2,7 +2,7 @@
 
 echo "[server-startup] Executing injector-secrets-manager secret.env"
 
-if [ $STATUS_SECRETS_VIEW  = "true" ];
+if [ $STATUS_SECRETS_VIEW  = 'true' ];
 then
 echo 'test secrets'
 fi
