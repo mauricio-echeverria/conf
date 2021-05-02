@@ -21,12 +21,6 @@ echo "[server-startup] Executing injector-secrets-manager secret.env"
 if [ -n "$STATUS_SECRETS_VIEW" ]; then
 if [ $STATUS_SECRETS_VIEW  = 'true' ];
 then
-echo 'true secrets'
-fi
-else
-    echo "empty"
-fi
-
 echo 'Loading secrets'
 echo "-----------------------------------"
 cat /var/secrets/env/secret.env
@@ -34,6 +28,13 @@ echo "-----------------------------------"
 export $(cat /var/secrets/env/secret.env | xargs)
 ##source /var/secrets/env/secret.env
 rm /var/secrets/env/secret.env
+fi
+else
+#    echo "empty"
+echo 'Loading secrets'
+export $(cat /var/secrets/env/secret.env | xargs)
+rm /var/secrets/env/secret.env
+fi
 
 echo "-----------------------------------"
 echo $FTP_HOST
