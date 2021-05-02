@@ -4,17 +4,13 @@ echo "[server-startup] Executing injector-secrets-manager secret.env"
 
 if [ $STATUS_SECRETS_VIEW  = 'true' ];
 then
-echo 'test secrets'
+echo 'true secrets'
 fi
 
-#if [ $STATUS_SECRETS_VIEW  == "false" ];
-#then
-#echo 'Loading secrets'
-#export $(cat /var/secrets/env/secret.env | xargs)
-#source /var/secrets/env/secret.env
-#rm /var/secrets/env/secret.env
-#fi
-
+if [ $STATUS_SECRETS_VIEW  = 'true' ];
+then
+echo 'false secrets'
+fi
 
 echo 'Loading secrets'
 echo "-----------------------------------"
