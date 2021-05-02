@@ -2,24 +2,33 @@
 
 echo "[server-startup] Executing injector-secrets-manager secret.env"
 
-if [ $STATUS_SECRETS_VIEW  == "true" ];
-then
+#if [ $STATUS_SECRETS_VIEW  == "true" ];
+#then
+#echo 'Loading secrets'
+#echo "-----------------------------------"
+#cat /var/secrets/env/secret.env
+#echo "-----------------------------------"
+#export $(cat /var/secrets/env/secret.env | xargs)
+##source /var/secrets/env/secret.env
+#rm /var/secrets/env/secret.env
+#fi
+
+#if [ $STATUS_SECRETS_VIEW  == "false" ];
+#then
+#echo 'Loading secrets'
+#export $(cat /var/secrets/env/secret.env | xargs)
+#source /var/secrets/env/secret.env
+#rm /var/secrets/env/secret.env
+#fi
+
+
 echo 'Loading secrets'
 echo "-----------------------------------"
 cat /var/secrets/env/secret.env
 echo "-----------------------------------"
 export $(cat /var/secrets/env/secret.env | xargs)
-#source /var/secrets/env/secret.env
+##source /var/secrets/env/secret.env
 rm /var/secrets/env/secret.env
-fi
-
-if [ $STATUS_SECRETS_VIEW  == "false" ];
-then
-echo 'Loading secrets'
-export $(cat /var/secrets/env/secret.env | xargs)
-#source /var/secrets/env/secret.env
-rm /var/secrets/env/secret.env
-fi
 
 echo "-----------------------------------"
 echo $FTP_HOST
