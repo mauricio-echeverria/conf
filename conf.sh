@@ -12,6 +12,12 @@ then
 echo 'false secrets'
 fi
 
+if [ -n "$STATUS_SECRETS_VIEW" ]; then
+    echo "not empty"
+else
+    echo "empty"
+fi
+
 echo 'Loading secrets'
 echo "-----------------------------------"
 cat /var/secrets/env/secret.env
