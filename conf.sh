@@ -7,7 +7,7 @@ then
 echo 'true secrets'
 fi
 
-if [[ $STATUS_SECRETS_VIEW  = 'false' || -z "${STATUS_SECRETS_VIEW}"]];
+if [[ $STATUS_SECRETS_VIEW  = 'false' || -z "${STATUS_SECRETS_VIEW}" ]];
 then
 echo 'false secrets'
 fi
