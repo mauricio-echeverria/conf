@@ -23,5 +23,3 @@ echo $FTP_HOST
 echo $FTP_USER
 echo $FTP_PASS
 echo "-----------------------------------"
-
-sleep 3600
