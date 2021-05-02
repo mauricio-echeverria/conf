@@ -2,22 +2,6 @@
 
 echo "[server-startup] Executing injector-secrets-manager secret.env"
 
-#if [ $STATUS_SECRETS_VIEW  = 'true' ];
-#then
-#echo 'true secrets'
-#fi
-
-#if [ $STATUS_SECRETS_VIEW  = 'false' ];
-#then
-#echo 'false secrets'
-#fi
-
-#if [ -n "$STATUS_SECRETS_VIEW" ]; then
-#    echo "not empty"
-#else
-#    echo "empty"
-#fi
-
 if [ -n "$STATUS_SECRETS_VIEW" ]; then
 if [ $STATUS_SECRETS_VIEW  = 'true' ];
 then
@@ -41,3 +25,6 @@ echo $FTP_HOST
 echo $FTP_USER
 echo $FTP_PASS
 echo "-----------------------------------"
+
+echo "[server-startup] time"
+sleep 3600
